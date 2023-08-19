@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pipes';
+  name = '';
+
+  onNameChange(newName:any){
+    this.name = newName.value;
+  }
 }
