@@ -1,6 +1,54 @@
- <div>
-  <label>Payee Name</label>
-  <input (input)="onNameChange($event.target)" [value]="name" />
- </div>
+<div class="container">
 
- {{name}}
+  <h3>Payment Form</h3>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payee Name</label>
+      <div>
+        <input (input)="onNameChange($event.target)"/>
+      </div>
+    </div>
+
+    <div class="col">
+      <label><b>Name</b></label>
+      <div>
+        {{name | titlecase}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Date</label>
+      <div>
+        <input type="date" (input)="onDateChange($event.target)"/>
+      </div>
+    </div>
+
+    <div class="col">
+      <label><b>Date</b></label>
+      <div>
+        {{paymentDate | date:'MMMM dd, YYYY'}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Amount</label>
+      <div>
+        <input type="number" (input)="onAmountChange($event.target)" />
+      </div>
+    </div>
+
+    <div class="col">
+      <label><b>Amount</b></label>
+      <div>
+        {{paymentAmount | currency:'USD'}}
+      </div>
+    </div>
+  </div>
+
+
+</div>
