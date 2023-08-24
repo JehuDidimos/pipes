@@ -10,6 +10,11 @@ export class AppComponent {
   name = '';
   paymentDate = '';
   paymentAmount = 0;
+  miles = 0;
+
+  onMileChange(newMile:any){
+    this.miles = newMile.value;
+  }
 
   onNameChange(newName:any){
     this.name = newName.value;

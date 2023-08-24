@@ -50,5 +50,21 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="form-group col">
+      <label>Miles</label>
+      <div>
+        <input type="number" (input)="onMileChange($event.target)" />
+      </div>
+    </div>
+
+    <div class="col">
+      <label><b>Conversion</b></label>
+      <div>
+        {{miles | convert: 'cm'}}
+      </div>
+    </div>
+  </div>
+
 
 </div>
