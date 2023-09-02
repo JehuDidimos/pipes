@@ -6,13 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ConvertPipe implements PipeTransform {
 
 
-  transform(value: number, targetUnit?: string): unknown {
+  transform(value: number, targetUnit?: string): number {
     if(!value){
-      return '0.0';
-    }
-
-    if(isNaN(value)){
-      return "Please enter a number";
+      return 0.0;
     }
 
     switch (targetUnit){
